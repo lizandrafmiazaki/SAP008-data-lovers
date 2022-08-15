@@ -21,3 +21,19 @@ body {
 .banner-cover {
 width: 100%;
 }
+
+.presentation {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: center;
+    color: #f0f0f0;
+    /* text-shadow: deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
+    text-shadow:0px 0px 1px #f0f0f0, 0px 0px 2px #f0f0f0, 0px 0px 7px #34FFFF;
+}
+
+label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-align: center;
+    color: #f0f0f0;
+}
