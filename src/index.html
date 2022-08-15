@@ -21,31 +21,31 @@
         <form action="" class="container-form">
           <form action="" class="search-form">
             <label for="search-for">Pesquisar por:</label>
-            <select name="" id="search-for">
-              <option value="">Selecione</option>
-              <option value="">Nome</option>
-              <option value="">Tipo de campeão</option>
-              <option value="">Dificuldade</option>
+            <select id="search-for" onChange="escolherOpcao()">
+              <option value="" selected >Selecione</option>
+              <option value="name">Nome</option>
+              <option value="type-champ">Tipo de campeão</option>
+              <option value="dificulty">Dificuldade</option>
             </select>
           </form>
           <form action="" class="filters-form">
             <label for="order-by">Ordenar por:</label>
             <select name="" id="order-by">
-              <option value="">Selecione</option>
-              <option value="">Ordem alfabética crescente (A-Z)</option>
-              <option value="">Ordem alfabética decrescente (Z-A)</option>
-              <option value="">Assassino</option>
-              <option value="">Mago</option>
-              <option value="">Lutador</option>
-              <option value="">Atirador</option>
-              <option value="">Controlador ou Suporte</option>
-              <option value="">Tanque</option>
-              <option value="">Únicos</option>
-              <option value="">Ordem crescente</option>
-              <option value="">Ordem decrescente</option>
+              <option value="" selected >Selecione</option>
+              <option value="order-AZ">Ordem alfabética crescente (A-Z)</option>
+              <option value="order-ZA">Ordem alfabética decrescente (Z-A)</option>
+              <option value="assassin">Assassino</option>
+              <option value="mage">Mago</option>
+              <option value="fighter">Lutador</option>
+              <option value="shooter">Atirador</option>
+              <option value="support">Controlador ou Suporte</option>
+              <option value="tank">Tanque</option>
+              <option value="single">Únicos</option>
+              <option value="asc-order">Ordem crescente</option>
+              <option value="desc-order">Ordem decrescente</option>
             </select>
           </form>
-        <button class="search-button">Pesquisar</button>  
+        <button id="btn-search">Pesquisar</button>  
         <section class="section-with-banners">
           <section class="banner-one">
             <figure>
