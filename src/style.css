@@ -1,9 +1,9 @@
 /* Seletor Css
 . para classes
-# para id 
+# para id
 */
 
-* { 
+* {
     margin: 0;
     padding: 0;
    }
@@ -11,7 +11,7 @@
 body {
     background-image: linear-gradient(140deg, #000000,#0F1329, #4555AF);
     background-attachment: fixed;
-    
+
     /* Responsividade */
     min-width: 280px;
     max-width: 1920px;
@@ -36,4 +36,48 @@ label {
     font-size: 18px;
     text-align: center;
     color: #f0f0f0;
+}
+
+
+.search-form, .filters-form {
+    display: inline-flex;
+    margin-block-end: 1%;
+}
+/* .form-section {
+   /* display: inline-flex; */
+   /* text-align: center; */
+   /* display: inline-flex;
+   margin-block-end: 1%;
+   margin-inline: 1%;
+   margin-top: 2%;
+
+} */
+.form-section {
+    text-align: center;
+} 
+
+#search-for, #order-by {
+    background: #cef0fa;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    padding: 3px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    text-align: justify;
+    color: #000000;
+}
+
+#btn-search {
+    background-image: linear-gradient(180deg, rgba(11, 196, 226, 1), rgba(44, 140, 194, 1));
+    border-radius: 8px;
+    border: 1px solid #0BC4E2;
+    padding: 5px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 6px #f0f0f0;
+    box-shadow: 1px 1px 8px #f0f0f0;
+
 }
