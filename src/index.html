@@ -17,22 +17,17 @@
           Bem-vinde ao Data LoLvers!<br>
           Aqui você conhece os personagens de League of Legends para começar a jogar!
         </p>
-        <section action="" class="form-section">
-            <form action="" class="search-form">
-              <label for="search-for">Pesquisar por:</label>
-              <select id="search-for" onChange="escolherOpcao()">
-                <option value="" selected >Selecione uma opção</option>
-                <option value="name">Nome</option>
-                <option value="type-champ">Tipo de campeão</option>
-                <option value="dificulty">Dificuldade</option>
+        <section action="" class="menu-btn">
+            <form action="" class="btn-name">
+              <select id="select-name" onChange="escolherOpcao()">
+                <option disabled selected value>Nome</option>
+                <option value="AZ">&#8595 A-Z</option>
+                <option value="ZA">&#8593 Z-A</option>
               </select>
             </form>
-            <form action="" class="filters-form">
-              <label for="order-by">Ordenar por:</label>
-              <select name="" id="order-by">
-                <option value="" selected >Selecione uma opção</option>
-                <option value="order-AZ">Ordem alfabética crescente (A-Z)</option>
-                <option value="order-ZA">Ordem alfabética decrescente (Z-A)</option>
+            <form action="" class="btn-type">
+              <select name="" id="select-type">
+                <option value="" disabled selected value>Tipo</option>
                 <option value="assassin">Assassino</option>
                 <option value="mage">Mago</option>
                 <option value="fighter">Lutador</option>
@@ -40,12 +35,19 @@
                 <option value="support">Controlador ou Suporte</option>
                 <option value="tank">Tanque</option>
                 <option value="single">Únicos</option>
-                <option value="asc-order">Ordem crescente</option>
-                <option value="desc-order">Ordem decrescente</option>
               </select>
             </form>
-            <button id="btn-search">Pesquisar</button>
-        </section>  
+            <form action="" class="btn-difficulty">
+              <select id="select-difficulty">
+                <option disabled selected value>Dificuldade</option>
+                <option value="ascending-order">&#8593 Crescente</option>
+                <option value="descending-order">&#8595 Decrescente</option>
+              </select>
+            </form>
+        </section> 
+        <p class="filter-calculation" id="filter-calculation"></p>
+        <div class="show-cards"></div>
+        <button class="btn-return" id="btn-return">Retornar ao topo</button> 
         <section id="champSection" class="section-with-banners">
           <section class="banner-one">
             <figure>
