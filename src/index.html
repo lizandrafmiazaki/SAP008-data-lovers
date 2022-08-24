@@ -24,22 +24,12 @@
         </p>
         <section action="" class="section-btn">
           <form action="" class="search-form">
-            <label for="search-for">Pesquisar por:</label>
-            <select id="search-for" onChange="escolherOpcao()">
-              <option value="" selected>Selecione uma opção</option>
-              <option value="name">Nome</option>
-              <option value="type-champ">Tipo de campeão</option>
-              <option value="dificulty">Dificuldade</option>
-            </select>
             <label for="order-by">Ordenar por:</label>
-            <select name="" id="order-by">
-              <!-- OH GABRIEL! -->
+            <select name="" id="order-by" onchange="capturaSelect()">
               <option value="" selected>Selecione uma opção</option>
               <optgroup label="Nome"> 
                 <option value="order-AZ" >Ordem alfabética crescente (A-Z)</option>
-                <option value="order-ZA">
-                  Ordem alfabética decrescente (Z-A)
-                </option>
+                <option value="order-ZA">Ordem alfabética decrescente (Z-A)</option>
               </optgroup>
               <optgroup label="Tipo de Campeão">
                 <option value="assassin">Assassino</option>
@@ -59,8 +49,11 @@
             <button type="reset" class="btn-clear" id="btn-clear">Limpar</button>
           </form>
         </section>
+        <!-- INÍCIO DE: TESTANDO SAÍDA DE RESULTADO -->
+        <p id="paragrafoTeste" style="color:bisque; font-size: 30px; text-align: center;"></p>
+        <!-- FIM DE: TESTANDO SAÍDA DE RESULTADO -->
         <p class="filter-calculation" id="filter-calculation"></p>
-        <section class="section-change" id="section-change"></section> 
+        <section class="section-change" id="section-change" style="color:white; font-size: 20px; text-align: center;"></section> 
         <!-- Aqui vai alternar entre html de banners e html de cards -->
         <button class="btn-return" id="btn-return">Retornar ao topo</button>
         <footer>
