@@ -1,21 +1,49 @@
 import data from './data/lol/lol.js';
 
-//---------------------------------------------------[início] Testando chamada do data.js
+//ARMAZENANDO TODOS OS DADOS EM UMA CONSTANTE:
+const todosOsDados = Object.keys(data.data);
+// console.log(todosOsDados);
 
-//=> Criei uma constante para salvar todas as chaves do documento data.js:
-const todasAsChaves = Object.keys(data.data);
+// document.getElementById("section-change").innerHTML = todosOsDados.map(imagem=>`<img src="${data.data[imagem].img}">`);
 
-//=> Peguei a div de saída
-const minhaDiv = document.getElementById("section-change");
+//CRIANDO A FUNÇÃO QUE PRINTA OS CARDS:
+function criaCard(todosOsDados) {
+    document.getElementById("section-change").innerHTML = todosOsDados.map((champs)=> 
+        `
+            <div class="cards">
+                <div class="div-da-imagem">
+                    <img class="imagem-do-card" src="${data.data[champs].splash}">
+                    <p class="name-do-card">${data.data[champs].name}</p>
+                </div>
+                <ul class="info-do-card">
+                    <li>${data.data[champs].title}</li>
+                    <li>Ataque: ${data.data[champs].info["attack"]}</li>
+                    <li>Defesa: ${data.data[champs].info["defense"]}</li>
+                    <li>Magia: ${data.data[champs].info["magic"]}</li>
+                    <li>Dificuldade: ${data.data[champs].info["difficulty"]}</li>
+                    <li>Tipo: ${data.data[champs].tags}</li>
+                </ul>
+            </div>
+        `
+).join("")
+}
 
-//=>Criei uma const pra salvar os names:
-const listaComNames = todasAsChaves.map(chaves => data.data[chaves].name);
+//CHAMANDO A FUNÇÃO PARA CRIAR CARDS NA TELA:
+criaCard(todosOsDados);
 
-//=> Escrevendo a lista no html:
-minhaDiv.innerHTML = listaComNames;
+// //---------------------------------------------------[início] Testando chamada do data.js
+// //=> Criei uma constante para salvar todas as chaves do documento data.js:
+// const todasAsChaves = Object.keys(data.data);
 
+// //=> Peguei a div de saída
+// const minhaDiv = document.getElementById("section-change");
 
-//----------------------------------------------------[Fim] Testando chamada do data.js
+// //=>Criei uma const pra salvar os names:
+// const listaComNames = todasAsChaves.map(chaves => data.data[chaves].name);
+
+// //=> Escrevendo a lista no html:
+// minhaDiv.innerHTML = listaComNames;
+// //----------------------------------------------------[Fim] Testando chamada do data.js
 
 //----------------------------------------------------------------------------------------[INÍCIO] Monitorando select
 //=> Declaração de variáveis úteis:
