@@ -33,20 +33,27 @@
             </select>
             <label for="order-by">Ordenar por:</label>
             <select name="" id="order-by">
+              <!-- OH GABRIEL! -->
               <option value="" selected>Selecione uma opção</option>
-              <option value="order-AZ">Ordem alfabética crescente (A-Z)</option>
-              <option value="order-ZA">
-                Ordem alfabética decrescente (Z-A)
-              </option>
-              <option value="assassin">Assassino</option>
-              <option value="mage">Mago</option>
-              <option value="fighter">Lutador</option>
-              <option value="shooter">Atirador</option>
-              <option value="support">Controlador ou Suporte</option>
-              <option value="tank">Tanque</option>
-              <option value="single">Únicos</option>
-              <option value="asc-order">Ordem crescente</option>
-              <option value="desc-order">Ordem decrescente</option>
+              <optgroup label="Nome"> 
+                <option value="order-AZ" >Ordem alfabética crescente (A-Z)</option>
+                <option value="order-ZA">
+                  Ordem alfabética decrescente (Z-A)
+                </option>
+              </optgroup>
+              <optgroup label="Tipo de Campeão">
+                <option value="assassin">Assassino</option>
+                <option value="mage">Mago</option>
+                <option value="fighter">Lutador</option>
+                <option value="shooter">Atirador</option>
+                <option value="support">Controlador ou Suporte</option>
+                <option value="tank">Tanque</option>
+                <option value="single">Únicos</option>
+              </optgroup>
+              <optgroup label="Dificuldade">
+                <option value="asc-order">Ordem crescente</option>
+                <option value="desc-order">Ordem decrescente</option>
+              </optgroup>
             </select>
             <button id="btn-search">Pesquisar</button>
             <button type="reset" class="btn-clear" id="btn-clear">Limpar</button>
