@@ -1,4 +1,5 @@
 import data from './data/lol/lol.js';
+import { dataLoL } from './data.js';
 
 //ARMAZENANDO TODOS OS DADOS EM UMA CONSTANTE:
 const todosOsDados = Object.keys(data.data);
@@ -30,6 +31,21 @@ function criaCard(todosOsDados) {
 
 //CHAMANDO A FUNÇÃO PARA CRIAR CARDS NA TELA:
 criaCard(todosOsDados);
+
+//pegando o id do select
+const selectTipo = document.querySelector("#search-by");
+const saidaDeCards = document.querySelector ("#section-change")
+
+// evento para filtrar por tipo
+selectTipo.addEventListener("change", (event)=>{
+    const valor = event.target.value;
+    const resultadoFiltrado = dataLoL.filtrarporTipo(todosOsDados, valor);
+    const mostraCards = criaCard(resultadoFiltrado);
+    saidaDeCards.innerHTML = mostraCards;
+    event.preventDefault();
+});
+// saidaDeCards.innerHTML = criaCard(todosOsDados);
+
 
 // //---------------------------------------------------[início] Testando chamada do data.js
 // //=> Criei uma constante para salvar todas as chaves do documento data.js:
