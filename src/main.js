@@ -46,13 +46,6 @@ selectTipo.addEventListener("change", (event)=>{
 });
 // saidaDeCards.innerHTML = criaCard(todosOsDados);
 
-// // ===== evento para filtrar por status ====
-// selectStatus.addEventListener('change', (event) => {
-//     const value = event.target.value;
-//     const listaFiltrada = rickAndMorty.filtrarPorStatus(list, value);
-//     const cards = displayCards(listaFiltrada);    
-//     cardContainer.innerHTML = cards;  
-
 
 // //---------------------------------------------------[início] Testando chamada do data.js
 // //=> Criei uma constante para salvar todas as chaves do documento data.js:

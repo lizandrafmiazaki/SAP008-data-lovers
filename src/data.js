@@ -18,18 +18,3 @@ const dataLoL = {
 
 }
 
-
-
-// const rickAndMorty = {
-
-//   // ===== Função de filtro por status ====
-//   filtrarPorStatus: function (list, status) {
-//       const filtro = list.filter(function(personagem) {        
-//           const statusFiltrado = personagem.status.toLowerCase() === status;         
-//           return statusFiltrado; 
-
-//       });             
-
-//       return filtro;  
-//   },
-// };
