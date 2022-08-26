@@ -42,7 +42,6 @@ function mostracards(champs){
 
 //pegando o id do select
 const selectTipo = document.querySelector("#search-by");
-const saidaDeCards = document.querySelector ("#section-change");
 
 // evento para filtrar por tipo
 selectTipo.addEventListener("change", (event)=>{
@@ -53,7 +52,6 @@ selectTipo.addEventListener("change", (event)=>{
     mostracards(resultadoFiltrado);
 });
 
-// saidaDeCards.innerHTML = criaCard(todosOsDados);
 
 
 // //---------------------------------------------------[início] Testando chamada do data.js
