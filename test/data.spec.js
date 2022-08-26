@@ -86,26 +86,6 @@ describe('filtrarporTipo', ()=> {
 //   });
 // });
 
-// describe('filtrarPorStatus', () => {
-//   it('é uma função', () => {
-//     expect(typeof rickAndMorty.filtrarPorStatus).toBe('function');
-
-//   });
-
-  // it('filtra o status dos personagens mortos', () => {
-  //   const expectedStatus = rickAndMorty.filtrarPorStatus(arrayTest, "dead");
-  //   expect(expectedStatus.length).toEqual(1);
-  //   expect(expectedStatus).toEqual([arrayTest[3]]);
-        
-  // });
-
-//   it('filtra o status dos personagens vivos', () => {
-//     const expectedStatus = rickAndMorty.filtrarPorStatus(arrayTest, "alive");
-//     expect(expectedStatus.length).toEqual(3);
-//     expect(expectedStatus).toEqual([arrayTest[0],arrayTest[1],arrayTest[2]]);
-//   });
-
-// });
 // describe('anotherExample', () => {
 //   it('is a function', () => {
 //     expect(typeof anotherExample).toBe('function');
