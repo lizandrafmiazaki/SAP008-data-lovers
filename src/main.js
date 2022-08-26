@@ -2,27 +2,30 @@ import data from './data/lol/lol.js';
 import { dataLoL } from './data.js';
 
 //ARMAZENANDO TODOS OS DADOS EM UMA CONSTANTE:
-const todosOsDados = Object.keys(data.data);
-// console.log(todosOsDados);
+const todosOsDados = Object.values(data.data);
+
+console.log(todosOsDados);
+console.log(Object.values(data.data));
+console.log(todosOsDados.map(champ => champ.tags.map(tag => tag)).toString());
 
 // document.getElementById("section-change").innerHTML = todosOsDados.map(imagem=>`<img src="${data.data[imagem].img}">`);
 
 //CRIANDO A FUNÇÃO QUE PRINTA OS CARDS:
-function criaCard(todosOsDados) {
-    document.getElementById("section-change").innerHTML = todosOsDados.map((champs)=> 
+function criaCard(champs) {
+    return champs.map((champ)=> 
         `
             <div class="cards">
                 <div class="div-da-imagem">
-                    <img class="imagem-do-card" src="${data.data[champs].splash}">
-                    <p class="name-do-card">${data.data[champs].name}</p>
+                    <img class="imagem-do-card" src="${champ.splash}">
+                    <p class="name-do-card">${champ.name}</p>
                 </div>
                 <ul class="info-do-card">
-                    <li>${data.data[champs].title}</li>
-                    <li>Ataque: ${data.data[champs].info["attack"]}</li>
-                    <li>Defesa: ${data.data[champs].info["defense"]}</li>
-                    <li>Magia: ${data.data[champs].info["magic"]}</li>
-                    <li>Dificuldade: ${data.data[champs].info["difficulty"]}</li>
-                    <li>Tipo: ${data.data[champs].tags}</li>
+                    <li>${champ.title}</li>
+                    <li>Ataque: ${champ.info["attack"]}</li>
+                    <li>Defesa: ${champ.info["defense"]}</li>
+                    <li>Magia: ${champ.info["magic"]}</li>
+                    <li>Dificuldade: ${champ.info["difficulty"]}</li>
+                    <li>Tipo: ${champ.tags}</li>
                 </ul>
             </div>
         `
@@ -30,20 +33,26 @@ function criaCard(todosOsDados) {
 }
 
 //CHAMANDO A FUNÇÃO PARA CRIAR CARDS NA TELA:
-criaCard(todosOsDados);
+mostracards(todosOsDados);
+
+function mostracards(champs){
+    const template = criaCard (champs);
+    document.getElementById("section-change").innerHTML = template
+}
 
 //pegando o id do select
 const selectTipo = document.querySelector("#search-by");
-const saidaDeCards = document.querySelector ("#section-change")
+const saidaDeCards = document.querySelector ("#section-change");
 
 // evento para filtrar por tipo
 selectTipo.addEventListener("change", (event)=>{
+    event.preventDefault();
     const valor = event.target.value;
     const resultadoFiltrado = dataLoL.filtrarporTipo(todosOsDados, valor);
-    const mostraCards = criaCard(resultadoFiltrado);
-    saidaDeCards.innerHTML = mostraCards;
-    event.preventDefault();
+    console.log(resultadoFiltrado);
+    mostracards(resultadoFiltrado);
 });
+
 // saidaDeCards.innerHTML = criaCard(todosOsDados);
 
 
