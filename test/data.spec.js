@@ -1,5 +1,5 @@
 // import { checkGrau, filtrarDados, ordenarDados, computeStats } from "../src/data.js";
-import { filtrarDados, ordenarDados } from "../src/data.js";
+import { filtrarDados, ordenarDados, computeStats } from "../src/data.js";
 
 const objetoTest = {
   champ1: {
@@ -226,8 +226,34 @@ it('retorna ordenação NOME Z-A', () => {
   expect(dadosFiltrados[5].name).toBe("Ahri");
   });
 
+  // testando função 'ordenarDados' pela ordem de dificuldade crescente >> OK!!!! 
+  it('retorna ordenação por dificuldade crescente', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = ordenarDados(resultado, "Dificuldade");
+    expect(dadosFiltrados.length).toEqual(6);
+    expect(dadosFiltrados[0].name).toBe("Morgana");
+    expect(dadosFiltrados[1].name).toBe("Sona");
+    expect(dadosFiltrados[2].name).toBe("Caitlyn");
+    expect(dadosFiltrados[3].name).toBe("Shen");
+    expect(dadosFiltrados[4].name).toBe("Poppy");
+    expect(dadosFiltrados[5].name).toBe("Ahri");
+    });
+});
+
+//Teste da função "computeStats" >> OK!!!
+describe("computeStats", () => {
+  it("é uma função", () => {
+    expect(typeof computeStats).toBe("function");
   });
 
+  //Teste da função "computeStats" com percentual >> OK!!!
+  it('retorna a porcentagem da pesquisa escolhida pelo usuário', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Melee");
+    const percentFiltrado = computeStats (dadosFiltrados, resultado).percentual;
+    expect(percentFiltrado).toEqual("16.67");
+  });
+});
 
 
 
