@@ -1,5 +1,5 @@
 // import { checkGrau, filtrarDados, ordenarDados, computeStats } from "../src/data.js";
-import {filtrarDados,} from "../src/data.js";
+import { filtrarDados } from "../src/data.js";
 
 const objetoTest = {
   champ1: {
@@ -51,24 +51,92 @@ const objetoTest = {
   },
 };
 
-// //testando se nosso objeto é um objeto mesmo! teste OK!
-describe('objetoTest', () => {
-  it('deve ser um objeto', () => {
-    expect(typeof objetoTest).toBe('object');
+//testando se nosso objeto é um objeto mesmo! teste OK!
+describe("objetoTest", () => {
+  it("deve ser um objeto", () => {
+    expect(typeof objetoTest).toBe("object");
   });
 });
 
-//testando nossa função filtro >> OK
-describe('filtrarDados', () => {
-  it('é uma função', () => {
-    expect(typeof filtrarDados).toBe('function');
+//TESTES DA FUNÇÃO 'filtrarDados' >> OK
+describe("filtrarDados", () => {
+  it("é uma função", () => {
+    expect(typeof filtrarDados).toBe("function");
   });
 
-  it('retorna tipo "Melee"', () => {
-    const resultado = Object.values (objetoTest);
-    expect(filtrarDados(resultado, "Melee")).toBe("Shen");
+  it('retorna "Shen" para o tipo "Melee"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Melee");
+    expect(dadosFiltrados.length).toEqual(1);
+    expect(dadosFiltrados[0].name).toBe("Shen");
+  });
+
+  it('retorna "Caitlyn" para o tipo "Marksman"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Marksman");
+    expect(dadosFiltrados.length).toEqual(1);
+    expect(dadosFiltrados[0].name).toBe("Caitlyn");
+  });
+
+  it('retorna "Ahri" para o tipo "Assassin"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Assassin");
+    expect(dadosFiltrados.length).toEqual(1);
+    expect(dadosFiltrados[0].name).toBe("Ahri");
+  });
+
+  it('retorna "Ahri", "Morgana" e "Sona" para o tipo "Mage"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Mage");
+    expect(dadosFiltrados.length).toEqual(3);
+    expect(dadosFiltrados[0].name).toBe("Ahri");
+    expect(dadosFiltrados[1].name).toBe("Morgana");
+    expect(dadosFiltrados[2].name).toBe("Sona");
+  });
+
+  it('retorna "Morgana" e "Sona" para o tipo "Support"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Support");
+    expect(dadosFiltrados.length).toEqual(2);
+    expect(dadosFiltrados[0].name).toBe("Morgana");
+    expect(dadosFiltrados[1].name).toBe("Sona");
+  });
+
+  it('retorna "Poppy" e "Shen" para o tipo "Tank"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Tank");
+    expect(dadosFiltrados.length).toEqual(2);
+    expect(dadosFiltrados[0].name).toBe("Poppy");
+    expect(dadosFiltrados[1].name).toBe("Shen");
+  });
+
+  it('retorna "Poppy" para o tipo "Fighter"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Fighter");
+    expect(dadosFiltrados.length).toEqual(1);
+    expect(dadosFiltrados[0].name).toBe("Poppy");
+  });
+
 });
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Testando função checkGrau
 // describe('checkGrau', () => {
@@ -83,7 +151,6 @@ describe('filtrarDados', () => {
 //     expect(typeof dataLoL).toBe('object');
 //   });
 // });
-
 
 // describe('filtrarporTipo', ()=> {
 //   it('vai filtrar os champs por tipo', () => {
