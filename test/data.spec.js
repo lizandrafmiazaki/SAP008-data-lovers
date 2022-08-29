@@ -1,5 +1,5 @@
 // import { checkGrau, filtrarDados, ordenarDados, computeStats } from "../src/data.js";
-import { filtrarDados } from "../src/data.js";
+import { filtrarDados, ordenarDados } from "../src/data.js";
 
 const objetoTest = {
   champ1: {
@@ -194,9 +194,39 @@ describe("filtrarDados", () => {
     });
 });
 
+//TESTES DA FUNÇÃO 'ordenarDados' >> OK!!!
+describe("ordenarDados", () => {
+  it("é uma função", () => {
+    expect(typeof ordenarDados).toBe("function");
+  });
 
+//testando ordem NOME A-Z >> OK!!!
+  it('retorna ordenação NOME A-Z', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = ordenarDados(resultado, "Nome");
+    expect(dadosFiltrados.length).toEqual(6);
+    expect(dadosFiltrados[0].name).toBe("Ahri");
+    expect(dadosFiltrados[1].name).toBe("Caitlyn");
+    expect(dadosFiltrados[2].name).toBe("Morgana");
+    expect(dadosFiltrados[3].name).toBe("Poppy");
+    expect(dadosFiltrados[4].name).toBe("Shen");
+    expect(dadosFiltrados[5].name).toBe("Sona");
+  });
 
+//testando ordem NOME Z-A >> OK!!!
+it('retorna ordenação NOME Z-A', () => {
+  const resultado = Object.values(objetoTest);
+  const dadosFiltrados = ordenarDados(resultado, "Nome", "ordem-decrescente");
+  expect(dadosFiltrados.length).toEqual(6);
+  expect(dadosFiltrados[0].name).toBe("Sona");
+  expect(dadosFiltrados[1].name).toBe("Shen");
+  expect(dadosFiltrados[2].name).toBe("Poppy");
+  expect(dadosFiltrados[3].name).toBe("Morgana");
+  expect(dadosFiltrados[4].name).toBe("Caitlyn");
+  expect(dadosFiltrados[5].name).toBe("Ahri");
+  });
 
+  });
 
 
 
