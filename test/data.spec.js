@@ -1,54 +1,52 @@
-import { dataLoL } from '../src/data.js';
+import { checkGrau, filtrarDados, ordenarDados, computeStats } from "../src/data.js";
 
 const objetoTest = {
-  Champs: {
-    champ1: {
-      info:{
-        nome: "Ahri",
-        dificuldade: "7",
-      },
-      tipo: ["Mago", "Assassino"],
+  champ1: {
+    name: "Ahri",
+    info: {
+      difficulty: 7,
     },
-  
-    champ2: {
-      info:{
-        nome: "Caitlyn",
-        dificuldade: "4",
-      },
-      tipo: ["Atirador"],
-    },
+    tags: ["Mago", "Assassino"],
+  },
 
-    champ3: {
-      info:{
-        nome: "Morgana",
-        dificuldade: "1",
-      },
-      tipo: ["Mago", "Suporte"],
+  champ2: {
+    name: "Caitlyn",
+    info: {
+      difficulty: 4,
     },
+    tags: ["Atirador"],
+  },
 
-    champ4: {
-      info:{
-        nome: "Sona",
-        dificuldade: "3",
-      },
-      tipo: ["Suporte", "Mago"],
+  champ3: {
+    name: "Morgana",
+    info: {
+      difficulty: 1,
     },
+    tags: ["Mago", "Suporte"],
+  },
 
-    champ5: {
-      info:{
-        nome: "Poppy",
-        dificuldade: "5",
-      },
-      tipo: ["Tanque", "Lutador"],
+  champ4: {
+    name: "Sona",
+    info: {
+      difficulty: 3,
     },
+    tags: ["Suporte", "Mago"],
+  },
 
-    champ6: {
-      info: {
-        nome: "Shen",
-        dificuldade: "4",
-      },
-      tipo: ["Tanque", "Melee"],
+  champ5: {
+    name: "Poppy",
+    info: {
+      difficulty: 5,
     },
+    tags: ["Tanque", "Lutador"],
+  },
+
+  champ6: {
+    name: "Shen",
+    info: {
+      difficulty: 4,
+    },
+    tags: ["Tanque", "Melee"],
   },
 };
 
