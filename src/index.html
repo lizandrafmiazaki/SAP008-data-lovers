@@ -23,38 +23,54 @@
           jogar!
         </p>
         <section class="section-btn">
-          <div class="search-form">
-            <label for="search-by">Buscar por:</label>
-            <select name="" id="search-by">
-              <option value="" selected>Selecione uma opção</option>
-              <optgroup label="Nome"> 
-                <option value="order-AZ" >Ordem alfabética crescente (A-Z)</option>
-                <option value="order-ZA">Ordem alfabética decrescente (Z-A)</option>
+          <form class="search-form" id="search-form">
+            <label for="pesquisar-por">Pesquisar por:</label>
+            <select id="pesquisar-por">
+              <option value="Assassin">Assassino</option>
+              <option value="Mage">Mago</option>
+              <option value="Fighter">Lutador</option>
+              <option value="Marksman">Atirador</option>
+              <option value="Support">Suporte</option>
+              <option value="Tank">Tanque</option>
+              <option value="Melee">Corpo a corpo</option>
+            </select>
+            <label for="ordenar-por">Ordenar por:</label>
+            <select id="ordenar-por">
+              <optgroup name="" label="Dificuldade">
+                <option value="dif-facil">Fácil</option>
+                <option value="dif-medio">Médio</option>
+                <option value="dif-dificil">Difícil</option>
               </optgroup>
-              <optgroup label="Tipo de Campeão">
-                <option value="assassin">Assassino</option>
-                <option value="mage">Mago</option>
-                <option value="fighter">Lutador</option>
-                <option value="marksman">Atirador</option>
-                <option value="support">Suporte</option>
-                <option value="tank">Tanque</option>
-                <option value="melee">Corpo a corpo</option>
-              </optgroup>
-              <optgroup label="Dificuldade">
-                <option value="asc-order">Ordem crescente</option>
-                <option value="desc-order">Ordem decrescente</option>
+              <optgroup name="" label="Nome">
+                <option value="ordem-crescente">A-Z</option>
+                <option value="ordem-decrescente">Z-A</option>
               </optgroup>
             </select>
-            <button id="btn-search">Pesquisar</button>
-            <button type="reset" class="btn-clear" id="btn-clear">Limpar</button>
-          </div>
+            <button type="submit" class="btn-search" id="btn-search">
+              Pesquisar
+            </button>
+            <button
+              class="btn-clear"
+              id="btn-clear"
+              onclick="window.location.reload()"
+            >
+              Limpar
+            </button>
+          </form>
         </section>
         <!-- INÍCIO DE: TESTANDO SAÍDA DE RESULTADO -->
-        <p id="paragrafoTeste" style="color:bisque; font-size: 30px; text-align: center;"></p>
+        <p
+          id="paragrafoTeste"
+          style="color: bisque; font-size: 30px; text-align: center"
+        ></p>
         <!-- FIM DE: TESTANDO SAÍDA DE RESULTADO -->
-        <p class="filter-calculation" id="filter-calculation"></p>
-        <section class="section-change" id="section-change" style="color:white;"></section> 
-                <!-- Aqui vai alternar entre html de banners e html de cards -->
+        <p class="presentation" id="filter-calculation"></p>
+        <section
+          class="section-change"
+          id="section-change"
+          style="color: white"
+        ></section>
+        <!-- Aqui vai alternar entre html de banners e html de cards -->
         <button class="btn-return" id="btn-return">Retornar ao topo</button>
         <footer>
           <p class="tag-footer">
