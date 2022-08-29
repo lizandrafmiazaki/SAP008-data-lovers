@@ -58,7 +58,7 @@ describe("objetoTest", () => {
   });
 });
 
-//TESTES DA FUNÇÃO 'filtrarDados' >> OK
+//TESTES DA FUNÇÃO 'filtrarDados' por TIPO >> OK
 describe("filtrarDados", () => {
   it("é uma função", () => {
     expect(typeof filtrarDados).toBe("function");
@@ -120,11 +120,79 @@ describe("filtrarDados", () => {
 });
 
 
+//TESTES DA FUNÇÃO 'filtrarDados' por GRAU DE DIFICULDADE 
+  // testando dificuldade fácil para SUPORTE! >> OK!
+describe("filtrarDados", () => {
+    it('retorna "Morgana" e "Sona" para dificuldade "fácil"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Support", "Dificuldade", "dif-facil");
+    expect(dadosFiltrados.length).toEqual(2);
+    expect(dadosFiltrados[0].name).toBe("Morgana");
+    expect(dadosFiltrados[1].name).toBe("Sona");
+  });
 
+  // testando dificuldade médio para MAGO! >> OK!
+  it('retorna "Ahri" do tipo "Mage" para dificuldade "médio"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Mage", "Dificuldade", "dif-medio");
+    expect(dadosFiltrados.length).toEqual(1);
+    expect(dadosFiltrados[0].name).toBe("Ahri");
+  });
 
+  // testando dificuldade médio para ASSASSINO! >> OK!
+  it('retorna "Ahri" do tipo "Assassin" para dificuldade "médio"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Assassin", "Dificuldade", "dif-medio");
+    expect(dadosFiltrados.length).toEqual(1);
+    expect(dadosFiltrados[0].name).toBe("Ahri");
+  });
 
+  // testando dificuldade médio para MARKSMAN! >> OK!!!
+  it('retorna "Caitlyn" do tipo "Marksman" para dificuldade "médio"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Marksman", "Dificuldade", "dif-medio");
+    expect(dadosFiltrados.length).toEqual(1);
+    expect(dadosFiltrados[0].name).toBe("Caitlyn");
+  });
 
+  // testando dificuldade médio para TANK! >> OK!!!
+  it('retorna "Poppy" e "Shen" do tipo "Tank" para dificuldade "médio"', () => {
+    const resultado = Object.values(objetoTest);
+    const dadosFiltrados = filtrarDados(resultado, "Tank", "Dificuldade", "dif-medio");
+    expect(dadosFiltrados.length).toEqual(2);
+    expect(dadosFiltrados[0].name).toBe("Poppy");
+    expect(dadosFiltrados[1].name).toBe("Shen");
+  });
+    // testando dificuldade médio para FIGHTER! >> OK!!!
+    it('retorna "Poppy" do tipo "Fighter" para dificuldade "médio"', () => {
+      const resultado = Object.values(objetoTest);
+      const dadosFiltrados = filtrarDados(resultado, "Fighter", "Dificuldade", "dif-medio");
+      expect(dadosFiltrados.length).toEqual(1);
+      expect(dadosFiltrados[0].name).toBe("Poppy");
+    });
 
+    // testando dificuldade médio para MELEE! >> OK!!!
+    it('retorna "Shen" do tipo "Melee" para dificuldade "médio"', () => {
+      const resultado = Object.values(objetoTest);
+      const dadosFiltrados = filtrarDados(resultado, "Melee", "Dificuldade", "dif-medio");
+      expect(dadosFiltrados.length).toEqual(1);
+      expect(dadosFiltrados[0].name).toBe("Shen");
+    });
+    
+    // testando dificuldade difícil para SUPPORT! >> OK!!!
+    it('espera que não retorne nenhum tipo para dificuldade "difícil"', () => {
+      const resultado = Object.values(objetoTest);
+      const dadosFiltrados = filtrarDados(resultado, "Support", "Dificuldade", "dif-dificil");
+      expect(dadosFiltrados.length).toEqual(0);
+    });
+    
+    // testando dificuldade difícil para MAGE! >> OK!!!
+    it('espera que não retorne nenhum tipo para dificuldade "difícil"', () => {
+      const resultado = Object.values(objetoTest);
+      const dadosFiltrados = filtrarDados(resultado, "Mage", "Dificuldade", "dif-dificil");
+      expect(dadosFiltrados.length).toEqual(0);
+    });
+});
 
 
 
