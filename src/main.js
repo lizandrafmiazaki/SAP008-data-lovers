@@ -12,21 +12,23 @@ function criaCard(champs) {
       (champ) =>
         `
             <div class="cards">
-                <div class="card-front">
-                    <img class="imagem-do-card" src="${champ.splash}">
-                    <p class="name-do-card"><strong>${champ.name}</strong></p>
+              <div class="card-in">
+                  <div class="card-front">
+                      <img class="imagem-do-card" src="${champ.splash}">
+                      <p class="name-do-card"><strong>${champ.name}</strong></p>
+                      <p class="name-do-card"><i>${champ.title}</i></p>
+                  </div>
+                  <div class="card-back">
+                    <ul class="info-do-card">
+                        <li>Ataque: ${champ.info["attack"]}</li>
+                        <li>Defesa: ${champ.info["defense"]}</li>
+                        <li>Magia: ${champ.info["magic"]}</li>
+                        <li>Dificuldade: ${champ.info["difficulty"]}</li>
+                        <li>Tipo: ${champ.tags.join(", ")}</li>
+                    </ul>
+                  </div> 
                 </div>
-                <div class="card-back">
-                  <ul class="info-do-card">
-                      <li>${champ.title}</li>
-                      <li>Ataque: ${champ.info["attack"]}</li>
-                      <li>Defesa: ${champ.info["defense"]}</li>
-                      <li>Magia: ${champ.info["magic"]}</li>
-                      <li>Dificuldade: ${champ.info["difficulty"]}</li>
-                      <li>Tipo: ${champ.tags.join(", ")}</li>
-                  </ul>
-                </div> 
-            </div>
+              </div>
         `
     )
     .join("");
