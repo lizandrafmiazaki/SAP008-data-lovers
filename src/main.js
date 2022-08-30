@@ -16,7 +16,7 @@ function criaCard(champs) {
                   <div class="card-front">
                       <img class="imagem-do-card" src="${champ.splash}">
                       <p class="name-do-card"><strong>${champ.name}</strong></p>
-                      <p class="name-do-card"><i>${champ.title}</i></p>
+                      <p class="titulo-do-card"><i>${champ.title}</i></p>
                   </div>
                   <div class="card-back">
                     <ul class="info-do-card">
