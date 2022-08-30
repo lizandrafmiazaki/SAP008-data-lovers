@@ -12,18 +12,20 @@ function criaCard(champs) {
       (champ) =>
         `
             <div class="cards">
-                <div class="div-da-imagem">
+                <div class="card-front">
                     <img class="imagem-do-card" src="${champ.splash}">
-                    <p class="name-do-card">${champ.name}</p>
+                    <p class="name-do-card"><strong>${champ.name}</strong></p>
                 </div>
-                <ul class="info-do-card">
-                    <li>${champ.title}</li>
-                    <li>Ataque: ${champ.info["attack"]}</li>
-                    <li>Defesa: ${champ.info["defense"]}</li>
-                    <li>Magia: ${champ.info["magic"]}</li>
-                    <li>Dificuldade: ${champ.info["difficulty"]}</li>
-                    <li>Tipo: ${champ.tags.join(", ")}</li>
-                </ul>
+                <div class="card-back">
+                  <ul class="info-do-card">
+                      <li>${champ.title}</li>
+                      <li>Ataque: ${champ.info["attack"]}</li>
+                      <li>Defesa: ${champ.info["defense"]}</li>
+                      <li>Magia: ${champ.info["magic"]}</li>
+                      <li>Dificuldade: ${champ.info["difficulty"]}</li>
+                      <li>Tipo: ${champ.tags.join(", ")}</li>
+                  </ul>
+                </div> 
             </div>
         `
     )
