@@ -27,8 +27,8 @@ function criaCard(champs) {
                         <li>Tipo: ${champ.tags.join(", ")}</li>
                     </ul>
                   </div> 
-                </div>
               </div>
+            </div>
         `
     )
     .join("");
