@@ -24,7 +24,8 @@ function criaCard(champs) {
                         <li>Defesa: ${champ.info["defense"]}</li>
                         <li>Magia: ${champ.info["magic"]}</li>
                         <li>Dificuldade: ${champ.info["difficulty"]}</li>
-                        <li>Tipo: ${champ.tags.join(", ")}</li>
+                        <li>Tipo: </li> 
+                        <li>${champ.tags.join(", ")}</li>
                     </ul>
                   </div> 
               </div>
