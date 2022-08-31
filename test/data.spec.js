@@ -64,66 +64,40 @@ describe("filtrarDados", () => {
     expect(typeof filtrarDados).toBe("function");
   });
 
-  it('retorna "Shen" para o tipo "Melee"', () => {
+  it.each([
+    ["Melee", 1, [objetoTest.champ6]],
+    ["Marksman", 1, [objetoTest.champ2]],
+    ["Assassin", 1, [objetoTest.champ1]],
+    ["Mage", 3, [objetoTest.champ1, objetoTest.champ3, objetoTest.champ4]],
+    ["Support", 2, [objetoTest.champ3, objetoTest.champ4]],
+    ["Tank", 2, [objetoTest.champ5, objetoTest.champ6]],
+    ["Fighter", 1, [objetoTest.champ5]]
+  ])("Deve retornar os personagens corretos para o tipo %s", (tag,length,result)=>{
     const resultado = Object.values(objetoTest);
-    const dadosFiltrados = filtrarDados(resultado, "Melee");
-    expect(dadosFiltrados.length).toEqual(1);
-    expect(dadosFiltrados[0].name).toBe("Shen");
-  });
+    const dadosFiltrados = filtrarDados(resultado, tag);
+    expect(dadosFiltrados.length).toEqual(length);
+    expect(dadosFiltrados).toEqual(result);
+  })
 
-  it('retorna "Caitlyn" para o tipo "Marksman"', () => {
+  it.each([
+    ["Support", "dif-facil", 2, [objetoTest.champ3, objetoTest.champ4]]
+    // ["Marksman", 1, [objetoTest.champ2]],
+    // ["Assassin", 1, [objetoTest.champ1]],
+    // ["Mage", 3, [objetoTest.champ1, objetoTest.champ3, objetoTest.champ4]],
+    // ["Support", 2, [objetoTest.champ3, objetoTest.champ4]],
+    // ["Tank", 2, [objetoTest.champ5, objetoTest.champ6]],
+    // ["Fighter", 1, [objetoTest.champ5]]
+  ])("Deve retornar os personagens corretos do TIPO %s para DIFICULDADE %s", (tag, nivelDificuldade, length,result)=>{
     const resultado = Object.values(objetoTest);
-    const dadosFiltrados = filtrarDados(resultado, "Marksman");
-    expect(dadosFiltrados.length).toEqual(1);
-    expect(dadosFiltrados[0].name).toBe("Caitlyn");
-  });
-
-  it('retorna "Ahri" para o tipo "Assassin"', () => {
-    const resultado = Object.values(objetoTest);
-    const dadosFiltrados = filtrarDados(resultado, "Assassin");
-    expect(dadosFiltrados.length).toEqual(1);
-    expect(dadosFiltrados[0].name).toBe("Ahri");
-  });
-
-  it('retorna "Ahri", "Morgana" e "Sona" para o tipo "Mage"', () => {
-    const resultado = Object.values(objetoTest);
-    const dadosFiltrados = filtrarDados(resultado, "Mage");
-    expect(dadosFiltrados.length).toEqual(3);
-    expect(dadosFiltrados[0].name).toBe("Ahri");
-    expect(dadosFiltrados[1].name).toBe("Morgana");
-    expect(dadosFiltrados[2].name).toBe("Sona");
-  });
-
-  it('retorna "Morgana" e "Sona" para o tipo "Support"', () => {
-    const resultado = Object.values(objetoTest);
-    const dadosFiltrados = filtrarDados(resultado, "Support");
-    expect(dadosFiltrados.length).toEqual(2);
-    expect(dadosFiltrados[0].name).toBe("Morgana");
-    expect(dadosFiltrados[1].name).toBe("Sona");
-  });
-
-  it('retorna "Poppy" e "Shen" para o tipo "Tank"', () => {
-    const resultado = Object.values(objetoTest);
-    const dadosFiltrados = filtrarDados(resultado, "Tank");
-    expect(dadosFiltrados.length).toEqual(2);
-    expect(dadosFiltrados[0].name).toBe("Poppy");
-    expect(dadosFiltrados[1].name).toBe("Shen");
-  });
-
-  it('retorna "Poppy" para o tipo "Fighter"', () => {
-    const resultado = Object.values(objetoTest);
-    const dadosFiltrados = filtrarDados(resultado, "Fighter");
-    expect(dadosFiltrados.length).toEqual(1);
-    expect(dadosFiltrados[0].name).toBe("Poppy");
-  });
-
+    const dadosFiltrados = filtrarDados(resultado, tag, "Dificuldade", nivelDificuldade);
+    expect(dadosFiltrados.length).toEqual(length);
+    expect(dadosFiltrados).toEqual(result);
+  })
 });
-
-
 //TESTES DA FUNÇÃO 'filtrarDados' por GRAU DE DIFICULDADE 
   // testando dificuldade fácil para SUPORTE! >> OK!
 describe("filtrarDados", () => {
-    it('retorna "Morgana" e "Sona" para dificuldade "fácil"', () => {
+    it.skip('retorna "Morgana" e "Sona" para dificuldade "fácil"', () => {
     const resultado = Object.values(objetoTest);
     const dadosFiltrados = filtrarDados(resultado, "Support", "Dificuldade", "dif-facil");
     expect(dadosFiltrados.length).toEqual(2);
