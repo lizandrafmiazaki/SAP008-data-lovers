@@ -68,11 +68,20 @@ label {
     margin: 3px;
 }
 
+/* ESTILIZAÇÃO DE BOTÕES */
+
 #btn-search, .btn-clear{
     font-weight: bold;
     text-align: center;
     text-shadow: 0px 0px 1px #000000;
 }
+
+.btn-return{
+    position: fixed;
+    bottom: 1.5%;
+    right: 1.5%;
+    cursor: pointer;
+  }
 
 
 /* ESTILIZAÇÃO DOS CARDS */
@@ -149,3 +158,16 @@ label {
     justify-content: center;
     padding: 20px;
 }
+
+.tag-footer, a:hover {
+    color: #D2AB5C;
+    text-shadow:0px 0px 1px #000000, 0px 0px 1px #000000, 0px 0px 10px #000000;
+}
+
+a {
+    color:#229BCB;
+  }
+
+/* a:hover  {
+    color: #D2AB5C;
+  } */

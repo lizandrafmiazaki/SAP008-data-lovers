@@ -58,3 +58,12 @@ function pesquisarSubmitForm(event) {
 
 mostrarCards(todosDados);
 formPesquisar.addEventListener("submit", pesquisarSubmitForm);
+
+
+const botaoRetornar = document.getElementById("btn-return");
+
+function retornarTopo(event) {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+botaoRetornar.addEventListener("click", retornarTopo);
