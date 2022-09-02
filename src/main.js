@@ -56,14 +56,41 @@ function pesquisarSubmitForm(event) {
   mostrarCards(ordenarDados(dadosFiltrados, ordem, valorOrdem));
 }
 
-mostrarCards(todosDados);
 formPesquisar.addEventListener("submit", pesquisarSubmitForm);
-
 
 const botaoRetornar = document.getElementById("btn-return");
 
-function retornarTopo(event) {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+botaoRetornar.addEventListener("click", () =>
+  window.scrollTo({ top: 0, behavior: "smooth" })
+);
+
+const botao1 = document.getElementById("banner-one");
+const botao2 = document.getElementById("banner-two");
+const botao3 = document.getElementById("banner-three");
+
+function direcionarBanner(event) {
+  const idDaFoto = event.srcElement.id;
+  const selectPesquisar = document.getElementById("pesquisar-por");
+  let valorSelecionado;
+
+  if (idDaFoto === "foto-1") {
+    valorSelecionado = "Marksman";
+  } else if (idDaFoto === "foto-2") {
+    valorSelecionado = "Assassin";
+  } else {
+    valorSelecionado = "Support";
+  }
+
+  const dadosFiltrados = filtrarDados(
+    todosDados,
+    valorSelecionado,
+    "Dificuldade",
+    "dif-facil"
+  );
+  selectPesquisar.value = valorSelecionado;
+  mostrarCards(ordenarDados(dadosFiltrados, "Dificuldade", "dif-facil"));
 }
 
-botaoRetornar.addEventListener("click", retornarTopo);
+botao1.addEventListener("click", direcionarBanner);
+botao2.addEventListener("click", direcionarBanner);
+botao3.addEventListener("click", direcionarBanner);
