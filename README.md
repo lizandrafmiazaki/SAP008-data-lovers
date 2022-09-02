@@ -1,5 +1,7 @@
 # Data Lovers
 
+LINK DO DEPLOY: https://amandapolari.github.io/SAP008-data-lovers/src/index.html
+
 ## Índice
 
 * [1. Preâmbulo](#1-preâmbulo)
