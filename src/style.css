@@ -36,46 +36,22 @@ body {
   cursor: pointer;
 }
 
-.section-with-banners {
-  display: inline-flexbox;
-}
-
-.foto-maior{
-    display: block;
-}
-
+/* Mantêm as fotos menores em linhas */
 .fotos-menores{
-    display: inline-flex;
+  display: inline-flex;
+}
+
+/* Tentando deixar responsivo: */
+
+.foto-maior {
+  display: block;
+}
+
+.section-with-banners {
+  display: inline-block;
 }
 
 
-
-
-
-/* .fotos-menores {
-    display: inline;
-    /* text-align: center; */
-/* justify-content: center; */
-/* align-content: center; */
-/* } */
-
-/* .foto-1 {
-    height: 40%;
-    width: 60%;
-}
-
-.foto-2, .foto-3 {
-    height: 40%;
-    width: 60%;
-}
-
-
-
-.banner-two, .banner-three {
-    margin: 5px;
-    padding: 0px;
-    /* display: flex; */
-/* } 
 
 /* SELETORES DO CORPO DA PÁGINA */
 
@@ -100,7 +76,7 @@ label {
 
 label {
   font-size: 20px;
-  margin-top: 7px;
+  margin-top: 9px;
   margin-left: 7px;
 }
 
