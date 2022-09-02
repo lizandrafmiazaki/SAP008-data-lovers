@@ -26,7 +26,7 @@
         <section class="section-btn">
           <form class="search-form" id="search-form">
             <label for="pesquisar-por">Pesquisar por:</label>
-            <select id="pesquisar-por">
+            <select id="pesquisar-por" class="select-pesquisar-por">
               <option value="Assassin">Assassino</option>
               <option value="Mage">Mago</option>
               <option value="Fighter">Lutador</option>
@@ -36,7 +36,7 @@
               <option value="Melee">Corpo a corpo</option>
             </select>
             <label for="ordenar-por">Ordenar por:</label>
-            <select id="ordenar-por">
+            <select id="ordenar-por" class="select-ordenar-por">
               <optgroup name="" label="Dificuldade">
                 <option value="dif-facil">Fácil</option>
                 <option value="dif-medio">Médio</option>
@@ -60,10 +60,23 @@
           </form>
         </section>
         <p class="presentation" id="filter-calculation"></p>
-        <section
-          class="section-change"
-          id="section-change"
-        ></section><!-- Aqui vai alternar entre html de banners e html de cards -->
+        <form class="section-change" id="section-change">
+          <div class="section-with-banners" id="section-with-banners">
+            <div class="foto-maior">
+                <button type="button" class="banner-one" id="banner-one">
+                    <img class="foto-1" id="foto-1" src="/src/img/atiradores-faceis.png" alt="imagem do banner 1"/>
+                </button>
+            </div>
+            <div class="fotos-menores">
+                <button type="button" class="banner-two" id="banner-two">
+                    <img class="foto-2" id="foto-2" src="/src/img/assassinos-faceis.png" alt="imagem do banner 2"/>
+                </button>
+                <button type="button" class="banner-three" id="banner-three">
+                    <img class="foto-3" id="foto-3" src="/src/img/suportes-faceis.png" alt="imagem do banner 3"/>
+                </button>
+            </div>
+          </div>
+        </form><!-- Aqui vai alternar entre html de banners e html de cards -->
         <button class="btn-return" id="btn-return">Topo&#x2B06 </button>
         <footer>
           <p class="tag-footer">
