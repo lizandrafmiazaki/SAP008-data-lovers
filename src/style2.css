@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner-cover, #foto-1, #foto-2, #foto-3 {
+    width: 100%;
+}
+.foto-maior {
+    display: block;
+}
+
+.fotos-menores {
+    display: inline-flex;
+
+}
+/* #foto-2, #foto-3 {
+    width: 50%;
+} */
