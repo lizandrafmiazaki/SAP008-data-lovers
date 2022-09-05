@@ -1,10 +1,10 @@
-/* Zerando configurações da página */
+/* ZERANDO AS CONFIGURAÇÕES DA PÁGINA */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* PARA TOOODO O CORPO DA PÁGINA */
+/* PARA TODO O CORPO DA PÁGINA */
 
 body {
   background-image: linear-gradient(140deg, #000000, #0f1329, #4555af);
@@ -17,7 +17,7 @@ body {
   text-align: center;
 }
 
-/*Sessão de banners*/
+/*SESSÃO DE BANNERS*/
 
 .banner-one,
 .banner-two,
@@ -50,8 +50,6 @@ body {
 .section-with-banners {
   display: inline-block;
 }
-
-
 
 /* SELETORES DO CORPO DA PÁGINA */
 
@@ -120,6 +118,8 @@ label {
   cursor: pointer;
 }
 
+/* ---- */
+
 #filter-calculation {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -136,15 +136,9 @@ label {
   border-radius: 8px;
 }
 
-/* .cards:hover {
-    background-color:#4555af88;
-} */
-
 .cards {
   display: inline-block;
 }
-
-/* ---- */
 
 .card-in {
   display: inline-block;
@@ -210,6 +204,11 @@ a {
   color: #229bcb;
 }
 
-/* a:hover  {
-    color: #D2AB5C;
-  } */
+/* RESPONSIVIDADE */
+
+/* @media screen and (max-width: 820px) {
+
+
+
+
+} */
