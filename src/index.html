@@ -26,38 +26,44 @@
         </p>
         <section class="section-btn">
           <form class="search-form" id="search-form">
-            <label for="pesquisar-por">Pesquisar por:</label>
-            <select id="pesquisar-por" class="seletor">
-              <option value="Assassin">Assassino</option>
-              <option value="Mage">Mago</option>
-              <option value="Fighter">Lutador</option>
-              <option value="Marksman">Atirador</option>
-              <option value="Support">Suporte</option>
-              <option value="Tank">Tanque</option>
-              <option value="Melee">Corpo a corpo</option>
-            </select>
-            <label for="ordenar-por">Ordenar por:</label>
-            <select id="ordenar-por" class="seletor">
-              <optgroup name="" label="Dificuldade">
-                <option value="dif-facil">Fácil</option>
-                <option value="dif-medio">Médio</option>
-                <option value="dif-dificil">Difícil</option>
-              </optgroup>
-              <optgroup name="" label="Nome">
-                <option value="ordem-crescente">A-Z</option>
-                <option value="ordem-decrescente">Z-A</option>
-              </optgroup>
-            </select>
-            <button type="submit" class="btn" id="btn-search">
-              Pesquisar
+            <div class="formularios"  id="form-pesquisar">
+              <label for="pesquisar-por">Pesquisar por:</label>
+              <select id="pesquisar-por" class="seletor">
+                <option value="Assassin">Assassino</option>
+                <option value="Mage">Mago</option>
+                <option value="Fighter">Lutador</option>
+                <option value="Marksman">Atirador</option>
+                <option value="Support">Suporte</option>
+                <option value="Tank">Tanque</option>
+                <option value="Melee">Corpo a corpo</option>
+              </select>
+            </div> 
+            <div class="formularios" id="form-ordenar"></div>
+              <label for="ordenar-por">Ordenar por:</label>
+              <select id="ordenar-por" class="seletor">
+                <optgroup name="" label="Dificuldade">
+                  <option value="dif-facil">Fácil</option>
+                  <option value="dif-medio">Médio</option>
+                  <option value="dif-dificil">Difícil</option>
+                </optgroup>
+                <optgroup name="" label="Nome">
+                  <option value="ordem-crescente">A-Z</option>
+                  <option value="ordem-decrescente">Z-A</option>
+                </optgroup>
+              </select>
+            </div> 
+            <div class="botoes" id="btn-pesquisar-limpar">
+              <button type="submit" class="btn" id="btn-search">
+                Pesquisar
+              </button>
+              <button
+                class="btn"
+                id="btn-clear"
+                onclick="window.location.reload()"
+              >
+                Limpar
             </button>
-            <button
-              class="btn"
-              id="btn-clear"
-              onclick="window.location.reload()"
-            >
-              Limpar
-            </button>
+          </div>
           </form>
         </section>
         <p class="presentation" id="filter-calculation"></p>
