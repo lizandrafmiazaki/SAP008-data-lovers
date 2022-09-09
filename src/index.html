@@ -13,7 +13,7 @@
         <figure class="front-cover">
           <img
             class="banner-cover"
-            src="./img/capa-desktop-nao-duplicada.png"
+            src="./img/capa-desktop-menor.png"
             alt="imagem-logo-e-capa"
           />
         </figure>
@@ -27,7 +27,7 @@
         <section class="section-btn">
           <form class="search-form" id="search-form">
             <label for="pesquisar-por">Pesquisar por:</label>
-            <select id="pesquisar-por" class="select-pesquisar-por">
+            <select id="pesquisar-por" class="seletor">
               <option value="Assassin">Assassino</option>
               <option value="Mage">Mago</option>
               <option value="Fighter">Lutador</option>
@@ -37,7 +37,7 @@
               <option value="Melee">Corpo a corpo</option>
             </select>
             <label for="ordenar-por">Ordenar por:</label>
-            <select id="ordenar-por" class="select-ordenar-por">
+            <select id="ordenar-por" class="seletor">
               <optgroup name="" label="Dificuldade">
                 <option value="dif-facil">Fácil</option>
                 <option value="dif-medio">Médio</option>
@@ -48,11 +48,11 @@
                 <option value="ordem-decrescente">Z-A</option>
               </optgroup>
             </select>
-            <button type="submit" class="btn-search" id="btn-search">
+            <button type="submit" class="btn" id="btn-search">
               Pesquisar
             </button>
             <button
-              class="btn-clear"
+              class="btn"
               id="btn-clear"
               onclick="window.location.reload()"
             >
@@ -64,21 +64,21 @@
         <form class="section-change" id="section-change"><!-- Aqui vai alternar entre html de banners e html de cards -->
           <div class="section-with-banners" id="section-with-banners">
             <div class="foto-maior">
-                <button type="button" class="banner-one" id="banner-one">
-                    <img class="foto-1" id="foto-1" src="./img/foto-menor-adc.png" alt="imagem do banner 1"/>
+                <button type="button" class="banner" id="banner-one">
+                    <img class="foto-banner" id="foto-1" src="./img/foto-menor-adc.png" alt="imagem do banner 1"/>
                 </button>
             </div>
             <div class="fotos-menores">
-                <button type="button" class="banner-two" id="banner-two">
-                    <img class="foto-2" id="foto-2" src="./img/menor-sup.png" alt="imagem do banner 2"/>
+                <button type="button" class="banner" id="banner-two">
+                    <img class="foto-banner" id="foto-2" src="./img/menor-sup.png" alt="imagem do banner 2"/>
                 </button>
-                <button type="button" class="banner-three" id="banner-three">
-                    <img class="foto-3" id="foto-3" src="./img/menor-assass.png" alt="imagem do banner 3"/>
+                <button type="button" class="banner" id="banner-three">
+                    <img class="foto-banner" id="foto-3" src="./img/menor-assass.png" alt="imagem do banner 3"/>
                 </button>
             </div>
           </div>
         </form>
-        <button class="btn-return" id="btn-return">Topo&#x2B06 </button>
+        <button class="btn" id="btn-return">Topo&#x2B06 </button>
         <footer>
           <p class="tag-footer">
             Desenvolvido por
