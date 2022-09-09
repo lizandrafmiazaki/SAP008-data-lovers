@@ -52,7 +52,7 @@ function pesquisarSubmitForm(event) {
 
   const dadosFiltrados = filtrarDados(todosDados, tipo, ordem, valorOrdem);
   const percentualFiltro = computeStats(dadosFiltrados, todosDados).percentual;
-  pFilterCalculation.innerHTML = `Sua pesquisa corresponde à ${percentualFiltro} % do total de Campeões`;
+  pFilterCalculation.innerHTML = `Total encontrado ${dadosFiltrados.length}, correspondendo à ${percentualFiltro} % do total de Campeões`;
   mostrarCards(ordenarDados(dadosFiltrados, ordem, valorOrdem));
 }
 
