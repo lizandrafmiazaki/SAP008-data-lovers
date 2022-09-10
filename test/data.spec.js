@@ -1,4 +1,3 @@
-// import { checkGrau, filtrarDados, ordenarDados, computeStats } from "../src/data.js";
 import { filtrarDados, ordenarDados, computeStats } from "../src/data.js";
 
 const objetoTest = {

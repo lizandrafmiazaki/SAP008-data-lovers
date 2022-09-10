@@ -57,13 +57,16 @@ function pesquisarSubmitForm(event) {
 }
 
 formPesquisar.addEventListener("submit", pesquisarSubmitForm);
+//---
 
+// Botão Return
 const botaoRetornar = document.getElementById("btn-return");
 
 botaoRetornar.addEventListener("click", () =>
   window.scrollTo({ top: 0, behavior: "smooth" })
 );
 
+// função do banner
 const botao1 = document.getElementById("banner-one");
 const botao2 = document.getElementById("banner-two");
 const botao3 = document.getElementById("banner-three");
