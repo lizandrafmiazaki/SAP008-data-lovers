@@ -27,9 +27,9 @@ O resultado da pesquisa é apresentado em forma de cards, com frente e verso, on
 
 Para facilitar a navegação do usuário, a página contém um botão de **'Limpar'** que limpa a pesquisa e retorna a página inicial, e o botão **'Topo'**, para retorna para o topo da página.
 
-![modelo com banner](/src/img/modelo-banners.png)
+![modelo com banner](/src/img/pagina-inicial.png)
 
-![modelo com cards](/src/img/modelo-cards.png)
+![modelo com cards](/src/img/pagina-de-cards.png)
 
 ***
 
