@@ -322,4 +322,8 @@ a {
     justify-content: center;
     padding: 20px;
   }
+
+  #developers {
+    font-size: 3.0vw; 
+  }
 }
