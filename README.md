@@ -1,6 +1,6 @@
 # Data Lovers
 
-## [Link do deploy](https://amandapolari.github.io/SAP008-data-lovers/src/index.html)
+## [Link do deploy](https://lizandrafmiazaki.github.io/SAP008-data-lovers/)
 
 
 ## Índice
